@@ -1,3 +1,10 @@
+## [0.1.1](https://github.com/Natteens/scenecomposer/compare/v0.1.0...v0.1.1) (2025-12-03)
+
+
+### Bug Fixes
+
+* improve UPM dependency filtering in release workflow ([a6de680](https://github.com/Natteens/scenecomposer/commit/a6de68026ab56a480c243eefe7ee6798b411e978))
+
 # 📝 Changelog
 
 Todas as mudanças notáveis neste projeto serão documentadas neste arquivo.

@@ -1,6 +1,6 @@
 {
   "name": "com.natteens.scenecomposer",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "displayName": "SceneComposer",
   "description": "Gerencie o carregamento de várias cenas no Unity de forma fluida e eficiente. O sistema realiza carregamentos e descarregamentos assíncronos e aditivos simultaneamente, oferecendo uma experiência contínua com tela de loading personalizável, feedback de progresso em tempo real e desempenho otimizado.",
   "keywords": [
@@ -17,7 +17,5 @@
   "documentationUrl": "https://github.com/Natteens/scenecomposer",
   "changelogUrl": "https://github.com/Natteens/scenecomposer/blob/main/CHANGELOG.md",
   "licensesUrl": "https://github.com/Natteens/scenecomposer/blob/main/LICENSE.md",
-  "dependencies": {
-    "com.eflatun.scenereference": "git+https://github.com/starikcetin/Eflatun.SceneReference.git#4.1.1"
-  }
+  "dependencies": {}
 }

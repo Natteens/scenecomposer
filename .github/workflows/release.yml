@@ -20,34 +20,52 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-          persist-credentials: false
+          persist-credentials: true    # necessário para @semantic-release/git
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '18'
 
+      - name: Install jq (required for JSON manipulation)
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y jq
+
       - name: Filter Unity dependencies dynamically
         run: |
-          # Verifica se o package.json existe e tem uma seção dependencies
-          if [ -f package.json ] && jq -e '.dependencies // empty | type=="object"' package.json > /dev/null; then
-            # Identifica pacotes relacionados à Unity no package.json e os remove
-            unity_packages=$(jq -r '.dependencies | keys[] | select(test("unity|Unity|com.unity"))' package.json 2>/dev/null || echo "")
-            echo "Pacotes Unity encontrados: $unity_packages"
+          if [ ! -f package.json ]; then
+            echo "package.json não encontrado. Pulando remoção de pacotes Unity."
+            exit 0
+          fi
 
-            if [ -n "$unity_packages" ]; then
-              echo "Removendo pacotes Unity..."
-              for pkg in $unity_packages; do
-                jq "del(.dependencies["$pkg"])" package.json > package.filtered.json
-                mv package.filtered.json package.json
-              done
+          removed_any=false
+
+          for section in dependencies devDependencies; do
+            if jq -e --arg sec "$section" '.[$sec] // empty | type=="object"' package.json >/dev/null; then
+              unity_packages=$(jq -r --arg sec "$section" '.[$sec] | keys[] | select(test("com\\.unity|unity"; "i"))' package.json 2>/dev/null || echo "")
+              if [ -n "$unity_packages" ]; then
+                echo "Pacotes Unity encontrados em $section: $unity_packages"
+                for pkg in $unity_packages; do
+                  echo "Removendo $pkg de $section"
+                  jq --arg sec "$section" --arg key "$pkg" 'del(.[$sec][$key])' package.json > package.filtered.json && mv package.filtered.json package.json
+                  removed_any=true
+                done
+              fi
             fi
+          done
+
+          if [ "$removed_any" = false ]; then
+            echo "Nenhum pacote Unity removido."
           else
-            echo "Não foram encontradas dependências no package.json ou o arquivo não existe."
+            echo "Dependências Unity removidas com sucesso. Conteúdo atual do package.json:"
+            jq . package.json
           fi
 
       - name: Install dependencies (no lock)
-        run: npm install --no-package-lock
+        run: |
+          # Se quiser evitar conflitos adicionais, pode rodar com --no-audit --no-fund
+          npm install --no-package-lock
 
       - name: Release
         uses: cycjimmy/semantic-release-action@v4

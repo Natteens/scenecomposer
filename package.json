@@ -17,5 +17,7 @@
   "documentationUrl": "https://github.com/Natteens/scenecomposer",
   "changelogUrl": "https://github.com/Natteens/scenecomposer/blob/main/CHANGELOG.md",
   "licensesUrl": "https://github.com/Natteens/scenecomposer/blob/main/LICENSE.md",
-  "dependencies": {}
+  "dependencies": {
+	"com.eflatun.scenereference": "git+https://github.com/starikcetin/Eflatun.SceneReference.git#4.1.1"
+}
 }

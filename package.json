@@ -1,5 +1,5 @@
 {
-  "name": "com.natteens. scenecomposer",
+  "name": "com.natteens.scenecomposer",
   "version": "0.1. 1",
   "displayName": "SceneComposer",
   "description": "Gerencie o carregamento de várias cenas no Unity de forma fluida e eficiente. O sistema realiza carregamentos e descarregamentos assíncronos e aditivos simultaneamente, oferecendo uma experiência contínua com tela de loading personalizável, feedback de progresso em tempo real e desempenho otimizado.",

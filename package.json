@@ -16,8 +16,8 @@
   "unity": "6000.0",
   "documentationUrl": "https://github.com/Natteens/scenecomposer",
   "changelogUrl": "https://github.com/Natteens/scenecomposer/blob/main/CHANGELOG.md",
-  "licensesUrl": "https://github.com/Natteens/scenecomposer/blob/main/LICENSE.md",
+  "licensesUrl": "https://github.com/Natteens/scenecomposer/blob/main/LICENSE. md",
   "dependencies": {
-	""com.eflatun. scenereference": "https://github.com/starikcetin/Eflatun.SceneReference.git?path=Eflatun.SceneReference/Packages/com.eflatun.scenereference#4.1.1""
-}
+    "com.eflatun.scenereference": "https://github. com/starikcetin/Eflatun.SceneReference. git?path=Eflatun.SceneReference/Packages/com.eflatun.scenereference#4.1.1"
+  }
 }

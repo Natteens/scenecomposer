@@ -1,6 +1,6 @@
 {
-  "name": "com.natteens.scenecomposer",
-  "version": "0.1.1",
+  "name": "com.natteens. scenecomposer",
+  "version": "0.1. 1",
   "displayName": "SceneComposer",
   "description": "Gerencie o carregamento de várias cenas no Unity de forma fluida e eficiente.  O sistema realiza carregamentos e descarregamentos assíncronos e aditivos simultaneamente, oferecendo uma experiência contínua com tela de loading personalizável, feedback de progresso em tempo real e desempenho otimizado.",
   "keywords": [
@@ -11,19 +11,19 @@
   "author": {
     "name": "Nathan da Silva Miranda",
     "email": "natteens. social@gmail.com",
-    "url": "https://github.com/Natteens"
+    "url": "https://github. com/Natteens"
   },
-  "unity": "6000. 0",
-  "documentationUrl": "https://github. com/Natteens/scenecomposer",
+  "unity": "2022.3",
+  "documentationUrl": "https://github.com/Natteens/scenecomposer",
   "changelogUrl": "https://github.com/Natteens/scenecomposer/blob/main/CHANGELOG.md",
   "licensesUrl": "https://github.com/Natteens/scenecomposer/blob/main/LICENSE. md",
   "dependencies": {
-    "com.eflatun.scenereference": "4.1.1"
+    "com.eflatun.scenereference": "4. 1.1"
   },
   "scopedRegistries": [
     {
       "name": "OpenUPM",
-      "url": "https://package.openupm.com",
+      "url": "https://package. openupm.com",
       "scopes": [
         "com. eflatun"
       ]

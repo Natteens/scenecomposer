@@ -1,0 +1,3 @@
+[submodule "ThirdParty/Eflatun.SceneReference"]
+	path = ThirdParty/Eflatun.SceneReference
+	url = https://github.com/starikcetin/Eflatun.SceneReference.git

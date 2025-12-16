@@ -2,8 +2,8 @@
     "name": "SceneComposer.Editor",
     "rootNamespace": "SceneComposer",
     "references": [
-        "GUID:6b39973dc6491564cbe7fe8b27c4438e",
-        "GUID:74ea05236efa18d4b9ba06fcbe6b6992",
+        "com.natteens.gameinit",
+        "SceneComposer",
         "GUID:d5e3f2088c248554288399658bebcf25",
         "GUID:58376d1d29b3362409ddddafca7c58c5"
     ],

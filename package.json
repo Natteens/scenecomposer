@@ -24,5 +24,11 @@
         "com.eflatun"
       ]
     }
-  ]
+  ],
+  "dependencies": {
+    "com.unity.nuget.newtonsoft-json": "3.2.2",
+    "com.unity.addressables": "2.7.6",
+    "com.unity.settings-manager": "2.1.1"
+  },
+  "unity": "6000.3"
 }
